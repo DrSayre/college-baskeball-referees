@@ -1,0 +1,1 @@
+SELECT referee_id, team_id, sum(fouls) AS total_fouls, sum(possessions) AS total_possessions, (sum(fouls)::numeric/sum(possessions)::numeric) AS foul_possessions_ratio, count(*), row_number() over (order by referee_id) AS id FROM games, referee_assignments WHERE games.id = referee_assignments.game_id GROUP BY team_id, referee_id;
