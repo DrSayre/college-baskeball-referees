@@ -18,5 +18,4 @@ test:
 
 production:
   <<: *default
-  username: deploy
   database: college-basketball-referees_production
