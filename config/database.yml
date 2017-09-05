@@ -2,6 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   username: calebsayre
+  password: 123456
   port: 5432
 
 development:
