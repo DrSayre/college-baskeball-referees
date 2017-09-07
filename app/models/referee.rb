@@ -1,5 +1,5 @@
 class Referee < ApplicationRecord
-  has_many :referee_assignments
+  has_many :referee_assignments, dependent: :destroy
   has_many :games, through: :referee_assignments
   has_many :teams, through: :games
   has_many :referee_team_stats
